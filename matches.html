@@ -15,9 +15,15 @@
     <!-- Navigation Bar -->
     <div id="deskHeader"></div>
     <script>
-        $(document).ready(function() {
-            $("#deskHeader").load("header.html");
+        $(document).ready(function () {
+            $("#deskHeader").load("/header.html");
         });
+
+        function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("open");
+        }
+
     </script>
     <section class="table">
         <div class="game-info">
