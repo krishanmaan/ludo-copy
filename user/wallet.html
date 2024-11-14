@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Money</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="wallet.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <div id="deskHeader"></div>
+    <script>
+        $(document).ready(function() {
+            $("#deskHeader").load("/header.html");
+        });
+      
+        function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("open");
+        }
+    
+    </script>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Balance Card -->
+        <div class="balance-card">
+            <img src="/png/wallet-icon.png" alt="Wallet Icon" class="wallet-icon">
+            <div class="balance-details">
+                <h1>₹ 110</h1>
+                <p>Available Balance</p>
+            </div>
+        </div>
+
+        <!-- Deposit Section -->
+        <div class="deposit-section">
+            <h2>Deposit Money</h2>
+            <label for="amount">Amount</label>
+            <div class="amount-input">
+                <span>₹</span>
+                <input type="number" id="amount" placeholder="Enter amount">
+            </div>
+            <!-- Quick Amount Buttons -->
+            <div class="quick-amounts">
+                <button>₹ 50</button>
+                <button>₹ 100</button>
+                <button>₹ 200</button>
+                <button>₹ 500</button>
+                <button>₹ 1000</button>
+            </div>
+            <!-- Add Money Button -->
+            <button class="add-money-btn">ADD MONEY</button>
+            <!-- Notice -->
+            <p class="notice">
+                <span>Note:</span> if money is not added to your wallet after paying, contact admin & share screenshot. Paisa deposit karte hi admin ko screenshot bhejen WhatsApp per
+            </p>
+            <!-- WhatsApp Contact Button -->
+            <a href="https://wa.me/91" class="whatsapp-btn" target="_blank">📲 91</a>
+        </div>
+    </div>
+</body>
+</html>

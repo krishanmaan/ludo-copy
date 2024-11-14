@@ -1,0 +1,142 @@
+/* Container */
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Balance Card */
+.balance-card {
+    background: linear-gradient(90deg, #FFC107, #FF9800);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.wallet-icon {
+    width: 60px;
+    height: auto;
+}
+
+.balance-details h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.balance-details p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Deposit Section */
+.deposit-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.deposit-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.amount-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.amount-input span {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-right: 1px solid #ddd;
+}
+
+.amount-input input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+/* Quick Amount Buttons */
+.quick-amounts {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.quick-amounts button {
+    background-color: #FFC107;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.quick-amounts button:hover {
+    background-color: #FF9800;
+}
+
+/* Add Money Button */
+.add-money-btn {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+.add-money-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Notice */
+.notice {
+    font-size: 12px;
+    color: #c00;
+    margin: 10px 0;
+}
+
+.notice span {
+    font-weight: bold;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe5a;
+}

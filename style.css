@@ -48,14 +48,17 @@ body {
 }
 
 /* Style for the navigation sidebar */
-.header .user-info{
+.header{
     display: flex;
     align-items: center;
+    background: #DC3545;
+    padding: 2vh;
 }
 .user-info{
     display: flex;
     align-items: center;
 }
+
 .user-icon {
     width: 40px;
     height: 40px;
@@ -89,7 +92,7 @@ body {
     right: 10px;
     font-size: 24px;
     cursor: pointer;
-    color: #d9534f;
+    color: black;
 }
 
 /* Additional style adjustments for nav items */

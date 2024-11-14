@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+       
+
+        .container {
+            width: 350px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .section {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .section h3 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        .profile-image i {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            color: #333;
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 4px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .input-group input {
+            width: 80%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .kyc-status {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .kyc-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+
+        .stats div {
+            text-align: center;
+        }
+
+        .logout-button {
+            background-color: #d9534f;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .logout-button i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="deskHeader"></div>
+    <script>
+        $(document).ready(function () {
+            $("#deskHeader").load("/header.html");
+        });
+
+        function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("open");
+        }
+
+    </script>
+
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="section">
+            <h3>Profile</h3>
+            <div class="profile-image">
+                
+                <i class="fas fa-user-edit"></i>
+            </div>
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" value="krishanmaan1">
+                <button class="button">Update</button>
+            </div>
+            <div class="input-group">
+                <label>Mobile Number</label>
+                <input type="text" value="8302658708" readonly>
+            </div>
+            <div class="kyc-status">
+                KYC Status: Verified <i class="fas fa-check-circle"></i>
+            </div>
+            <button class="kyc-button">KYC Details</button>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="section">
+            <h3>Statistics</h3>
+            <div class="stats">
+                <div>
+                    <i class="fas fa-gamepad"></i>
+                    <p>Games Played</p>
+                    <strong>1</strong>
+                </div>
+                <div>
+                    <i class="fas fa-rupee-sign"></i>
+                    <p>Earnings</p>
+                    <strong>₹195</strong>
+                </div>
+            </div>
+            <div class="stats">
+                <div>
+                    <i class="fas fa-share-alt"></i>
+                    <p>Referral Earning</p>
+                    <strong>₹0</strong>
+                </div>
+                <div>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Penalty</p>
+                    <strong>₹0</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logout Button -->
+        <button class="logout-button"><i class="fas fa-sign-out-alt"></i>Logout</button>
+    </div>
+</body>
+
+</html>
