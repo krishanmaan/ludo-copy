@@ -1,32 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Ludo Club</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="left-section">
-            <div class="menu-icon">
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24" fill="currentColor">
-                        <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"></path>
-                    </svg>
-                </span>
-            </div>
-            <img src="/png/lp_logo.webp" alt="Ludo Club Logo" class="logo-top">
+   <!-- Navigation Bar -->
+   <nav class="navbar">
+    <div class="left-section">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z">
+                    </path>
+                </svg>
+            </span>
         </div>
-        <div class="top-info">
-            <span class="balance">💎10</span>
-            <span class="balance">🏆100</span>
+        <img src="/png/lp_logo.webp" alt="Ludo Club Logo" class="logo-top">
+    </div>
+    <div class="top-info">
+        <span class="balance">💎10</span>
+        <span class="balance">🏆100</span>
+    </div>
+</nav>
+
+<!-- Navigation Menu (Sidebar) -->
+<div class="nav-container" id="navMenu">
+    <!-- Header Section -->
+    <div class="header">
+        <img src="/png/lp_logo.webp" alt=" Ludo Club Logo" class="logo-top">
+        <h2 class="title"> Ludo Club</h2>
+        <span class="close-button" onclick="toggleMenu()">&times;</span>
+    </div>
+
+    <!-- User Info Section -->
+    <div class="user-info">
+        <img src="/png/user-icon.png" alt="User Icon" class="user-icon">
+        <div class="user-details">
+            <p class="username">Krishan Maan</p>
+            <p class="user-handle">@krishanmaan1</p>
         </div>
-    </nav>
-    
-    
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+        <button class="nav-item"><span>🏠</span>Home</button>
+        <button class="nav-item"><span>💼</span>Wallet</button>
+        <button class="nav-item"><span>📜</span>History</button>
+        <button class="nav-item"><span>💸</span>Withdraws</button>
+        <button class="nav-item"><span>👤</span>Profile</button>
+        <button class="nav-item"><span>🎁</span>Refer & Earn</button>
+        <button class="nav-item whatsapp"><span>💬</span>Contact On Whatsapp</button>
+        <button class="nav-item instagram"><span>📷</span>Connect On Instagram</button>
+        <button class="nav-item"><span>📜</span>Privacy Policy</button>
+        <button class="nav-item"><span>⚖️</span>Terms & Conditions</button>
+        <button class="nav-item"><span>📜</span>Rules</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="#" class="legal-terms">Legal Terms</a>
+    </div>
+</div>
+
+
 
     <!-- Notice Bar -->
     <section class="notice-bar">
@@ -35,7 +79,8 @@
 
     <!-- Payment Notice -->
     <section class="payment-notice">
-        <p>पेमेंट करने के बाद स्क्रीनशॉट ले और सपोर्ट पर जाकर एडमिन को सेंड करें पैसे आपके 3 से 5 मिनट में एड हो जाएंगे</p>
+        <p>पेमेंट करने के बाद स्क्रीनशॉट ले और सपोर्ट पर जाकर एडमिन को सेंड करें पैसे आपके 3 से 5 मिनट में एड हो जाएंगे
+        </p>
     </section>
 
     <!-- Game Section -->
@@ -43,11 +88,15 @@
         <h2>Games</h2>
         <div class="game-cards">
             <!-- Game Card 1 -->
-            <div class="game-card">
-                <img src="/png/ludo1.webp" alt="Ludo King">
-                <p class="game-title">Ludo King</p>
-                <span class="live-badge">Live</span>
-            </div>
+   
+                <div class="game-card">
+                    <a href="/matches.html">
+                    <img src="/png/ludo1.webp" alt="Ludo King">
+                    </a>
+                    <p class="game-title">Ludo King</p>
+                    <span class="live-badge">Live</span>
+                </div>
+      
 
             <!-- Game Card 2 -->
             <div class="game-card">
@@ -68,6 +117,12 @@
             <p>For best experience, open LudoPlayers.com on Chrome mobile</p>
         </div>
     </footer>
-
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("open");
+        }
+    </script>
 </body>
+
 </html>

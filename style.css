@@ -47,7 +47,89 @@ body {
     border-radius: 5px;
 }
 
+/* Style for the navigation sidebar */
+.header .user-info{
+    display: flex;
+    align-items: center;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+}
+.user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.nav-container {
+    width: 250px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
 
+.nav-container.open {
+    left: 0;
+}
+
+.navbar .menu-icon {
+    cursor: pointer;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #d9534f;
+}
+
+/* Additional style adjustments for nav items */
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #333;
+  
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 85%;
+    text-align: left;
+    border: 1px solid #333;
+    padding: 5px;
+    border-radius: 5px;
+    margin:  2vh;
+   
+}
+
+.nav-item:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-item span {
+    margin-right: 10px;
+}
+
+/* Custom Colors for Specific Items */
+.whatsapp {
+    background-color: #25D366;
+    color: #fff;
+}
+
+.instagram {
+    background-image: linear-gradient(45deg, #f58529, #feda77, #dd2a7b, #8134af, #515bd4);
+    color: #fff;
+}
 
 /* Notice Bar */
 .notice-bar {

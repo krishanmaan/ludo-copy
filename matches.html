@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matches Ludo Club</title>
-    <link rel="stylesheet" href="matches.css">
+    <title>Ludo King - Create Match</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="matches.css">
+   
 </head>
 
 <body>
-
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="left-section">
-            <div class="menu-icon">
+            <div class="menu-icon" onclick="toggleMenu()">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24"
                         fill="currentColor">
@@ -32,30 +32,119 @@
         </div>
     </nav>
 
+    <!-- Navigation Menu (Sidebar) -->
+    <div class="nav-container" id="navMenu">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="/png/lp_logo.webp" alt=" Ludo Club Logo" class="logo-top">
+            <h2 class="title"> Ludo Club</h2>
+            <span class="close-button" onclick="toggleMenu()">&times;</span>
+        </div>
+
+        <!-- User Info Section -->
+        <div class="user-info">
+            <img src="/png/user-icon.png" alt="User Icon" class="user-icon">
+            <div class="user-details">
+                <p class="username">Krishan Maan</p>
+                <p class="user-handle">@krishanmaan1</p>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="nav-menu">
+            <button class="nav-item"><span>🏠</span>Home</button>
+            <button class="nav-item"><span>💼</span>Wallet</button>
+            <button class="nav-item"><span>📜</span>History</button>
+            <button class="nav-item"><span>💸</span>Withdraws</button>
+            <button class="nav-item"><span>👤</span>Profile</button>
+            <button class="nav-item"><span>🎁</span>Refer & Earn</button>
+            <button class="nav-item whatsapp"><span>💬</span>Contact On Whatsapp</button>
+            <button class="nav-item instagram"><span>📷</span>Connect On Instagram</button>
+            <button class="nav-item"><span>📜</span>Privacy Policy</button>
+            <button class="nav-item"><span>⚖️</span>Terms & Conditions</button>
+            <button class="nav-item"><span>📜</span>Rules</button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <a href="#" class="legal-terms">Legal Terms</a>
+        </div>
+    </div>
     <section class="table">
         <div class="game-info">
-            <h1>Game: Ludo King</h1>
+            <h1>Game: <span class="game-title">Ludo King</span></h1>
             <div class="create-match">
                 <h2>Create Match</h2>
-                <input type="text" placeholder="0">
+                <input type="text" placeholder="00">
                 <button>Create</button>
+            </div>
+            <div class="rules">
+                <button>ℹ️ Rules</button>
             </div>
         </div>
     </section>
 
-
-
-    <!-- Footer Section with About -->
-    <footer class="footer">
-        <div class="logo">
-            <img src="/png/lp_logo.webp" alt="Ludo Club Logo">
+    <section class="running-matches">
+        <h3>🏆 Running Matches</h3>
+        <div class="match">
+            <div class="bet">Bet: ₹150</div>
+            <div class="player-info">
+                <img src="/png/user-icon.png" alt="User" class="user-icon">
+                <span>@yasir1</span>
+            </div>
+            <img src="/png/dice.png" alt="Dice Icon" class="dice-icon">
+            <div class="player-info">
+                <img src="/png/user-icon.png" alt="User" class="user-icon">
+                <span>@rahulhasan1</span>
+            </div>
+            <div class="prize">Prize: ₹292</div>
         </div>
-        <div class="about">
-            <h3>Play Ludo & Win Real Cash!</h3>
-            <p>For best experience, open LudoPlayers.com on Chrome mobile</p>
+        <div class="match">
+            <div class="bet">Bet: ₹300</div>
+            <div class="player-info">
+                <img src="/png/user-icon.png" alt="User" class="user-icon">
+                <span>@aashik1</span>
+            </div>
+            <img src="/png/dice.png" alt="Dice Icon" class="dice-icon">
+            <div class="player-info">
+                <img src="/png/user-icon.png" alt="User" class="user-icon">
+                <span>@dilsahd1</span>
+            </div>
+            <div class="prize">Prize: ₹585</div>
         </div>
-    </footer>
-
+        <div class="match">
+            <div class="bet">Bet: ₹ 450</div>
+            <div class="player-info">
+                <img src="/png/user-icon.png" alt="User" class="user-icon">
+                <span>@khan1</span>
+            </div>
+            <img src="/png/dice.png" alt="Dice Icon" class="dice-icon">
+            <div class="player-info">
+                <img src="/png/user-icon.png" alt="User" class="user-icon">
+                <span>@aseem1</span>
+            </div>
+            <div class="prize">Prize: ₹ 877</div>
+        </div>
+        <div class="match">
+            <div class="bet">Bet: ₹150</div>
+            <div class="player-info">
+                <img src="/png/user-icon.png" alt="User" class="user-icon">
+                <span>@yasir1</span>
+            </div>
+            <img src="/png/dice.png" alt="Dice Icon" class="dice-icon">
+            <div class="player-info">
+                <img src="/png/user-icon.png" alt="User" class="user-icon">
+                <span>@rahulhasan1</span>
+            </div>
+            <div class="prize">Prize: ₹292</div>
+        </div>
+    </section>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("open");
+        }
+    </script>
 </body>
 
 </html>
