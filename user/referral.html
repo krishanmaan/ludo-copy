@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Earnings</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      
+
+        .container {
+           
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .balance-info {
+            display: flex;
+            gap: 15px;
+            font-size: 18px;
+        }
+
+        .earnings-section,
+        .referral-section {
+            padding: 20px;
+        }
+
+        .earnings-section h2,
+        .referral-section h2 {
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .earnings-card {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .earnings-item {
+            text-align: center;
+        }
+
+        .earnings-item p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .earnings-item span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .referral-code {
+            background-color: #d0e3ff;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .copy-btn,
+        .whatsapp-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .copy-btn {
+            background-color: #333;
+        }
+
+        .whatsapp-btn {
+            background-color: #25d366;
+        }
+
+        .copy-btn:hover,
+        .whatsapp-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="deskHeader"></div>
+    <script>
+        $(document).ready(function () {
+            $("#deskHeader").load("/header.html");
+        });
+
+        function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("open");
+        }
+
+    </script>
+    <div class="container">
+
+
+        <div class="earnings-section">
+            <h2>My Referral Earnings</h2>
+            <div class="earnings-card">
+                <div class="earnings-item">
+                    <p>Referred Players</p>
+                    <span>0</span>
+                </div>
+                <div class="earnings-item">
+                    <p>Referral Earnings</p>
+                    <span>₹ 0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="referral-section">
+            <h2>Referral Code</h2>
+            <div class="referral-code">
+                <span>XZ21KYW3</span>
+            </div>
+            <button class="copy-btn">📋 Copy Referral Code</button>
+            <button class="whatsapp-btn">💬 Share On Whatsapp</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

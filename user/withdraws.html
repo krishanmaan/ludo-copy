@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw Money</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+       
+
+        .container {
+          
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .balance-info {
+            display: flex;
+            gap: 15px;
+            font-size: 18px;
+        }
+
+        .withdraw-section {
+            padding: 20px;
+        }
+
+        .withdraw-section h2 {
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .balance-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .wallet-btn {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .withdraw-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .withdraw-form select,
+        .withdraw-form input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .min-amount {
+            font-size: 14px;
+            color: green;
+        }
+
+        .withdraw-btn {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .history-section {
+            padding: 20px;
+        }
+
+        .history-section h2 {
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .history-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .history-details {
+            font-size: 14px;
+        }
+
+        .amount {
+            font-size: 16px;
+            font-weight: bold;
+            color: green;
+        }
+
+        .status {
+            font-size: 14px;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+
+        .completed {
+            background-color: #d4edda;
+            color: #155724;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="deskHeader"></div>
+    <script>
+        $(document).ready(function () {
+            $("#deskHeader").load("/header.html");
+        });
+
+        function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("open");
+        }
+
+    </script>
+    <div class="container">
+      
+
+        <div class="withdraw-section">
+            <h2>Withdraw Money</h2>
+            <div class="balance-card">
+                <span>Balance: ₹ 0</span>
+                <button class="wallet-btn">Transfer To Wallet</button>
+            </div>
+            <div class="withdraw-form">
+                <select>
+                    <option>Paytm</option>
+                    <option>Bank Transfer</option>
+                    <option>UPI</option>
+                </select>
+                <input type="text" placeholder="UPI ID / Mobile Number">
+                <input type="number" placeholder="Amount">
+                <p class="min-amount">Minimum Withdraw: ₹ 195</p>
+                <button class="withdraw-btn">WITHDRAW MONEY</button>
+                <p class="note">Note: Take your reply ID and instant withdraw</p>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h2>Withdraws History</h2>
+            <div class="history-item">
+                <div class="history-details">
+                    <p><strong>PAYTM: 3213.</strong></p>
+                    <p>Req Id : WD39541731492497</p>
+                    <p>13 Nov 2024, 03:38 pm</p>
+                </div>
+                <div class="history-status">
+                    <span class="amount">₹ 195</span>
+                    <span class="status completed">✔ Completed</span>
+                </div>
+            </div>
+            <div class="history-item">
+                <div class="history-details">
+                    <p><strong>PAYTM: 3213.</strong></p>
+                    <p>Req Id : WD39541731492497</p>
+                    <p>13 Nov 2024, 03:38 pm</p>
+                </div>
+                <div class="history-status">
+                    <span class="amount">₹ 195</span>
+                    <span class="status completed">✔ Completed</span>
+                </div>
+            </div>
+            <div class="history-item">
+                <div class="history-details">
+                    <p><strong>PAYTM: 3213.</strong></p>
+                    <p>Req Id : WD39541731492497</p>
+                    <p>13 Nov 2024, 03:38 pm</p>
+                </div>
+                <div class="history-status">
+                    <span class="amount">₹ 195</span>
+                    <span class="status completed">✔ Completed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
